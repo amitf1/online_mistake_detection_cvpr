@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "online-mistake-detection"
+version = "0.1.0"
+description = "Online procedural mistake detection with video language models."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+omd-train-a = "online_mistake_detection.training.module_a:main"
+omd-train-b = "online_mistake_detection.training.module_b:main"
+omd-train-c = "online_mistake_detection.training.module_c:main"
+omd-train-monolith = "online_mistake_detection.training.abc_monolith:main"
+omd-infer = "online_mistake_detection.pipeline.runner:main"
+omd-summarize = "online_mistake_detection.pipeline.summary:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "integration: requires external datasets or optional heavy dependencies",
+  "gpu: requires a CUDA GPU",
+]

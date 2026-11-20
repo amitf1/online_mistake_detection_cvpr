@@ -1,0 +1,34 @@
+# Install a CUDA build of PyTorch first, then Unsloth without dependencies (see README):
+#   pip install "torch>=2.10.0,<2.11.0" torchvision --index-url https://download.pytorch.org/whl/cu128
+#   pip install unsloth==2026.6.7 unsloth_zoo==2026.6.5 --no-deps
+#   pip install -r requirements.txt
+
+transformers==5.5.0
+datasets>=3.4.1,!=4.0.*,!=4.1.0,<4.4.0
+pydantic
+nest-asyncio
+accelerate
+bitsandbytes
+cut_cross_entropy
+diffusers
+hf_transfer
+msgspec
+peft
+protobuf
+psutil
+qwen-vl-utils
+decord
+sentencepiece
+torchao
+tqdm
+triton
+trl
+tyro
+xformers>=0.0.27.post2
+opencv-python
+numpy
+tensorboard
+wandb
+matplotlib
+bert-score==0.3.13
+pytest

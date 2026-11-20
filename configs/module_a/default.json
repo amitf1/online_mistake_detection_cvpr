@@ -1,0 +1,6 @@
+{
+  "label_mode": "step_id",
+  "stride_seconds": 5.0,
+  "completion_margin": 0.1,
+  "seed": 3407
+}

@@ -1,0 +1,1 @@
+"""EgoPER ABC monolith evaluation."""

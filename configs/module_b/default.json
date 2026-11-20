@@ -1,0 +1,8 @@
+{
+  "late_trigger_probability": 0.2,
+  "pre_pad_ratio_min": 0.1,
+  "pre_pad_ratio_max": 0.5,
+  "post_pad_ratio_min": 0.1,
+  "post_pad_ratio_max": 0.5,
+  "strict_clip_bounds": true
+}

@@ -1,0 +1,30 @@
+{
+  "model": "microsoft/deberta-xlarge-mnli",
+  "num_layers": 40,
+  "idf": false,
+  "rescale_with_baseline": false,
+  "pipeline": {
+    "mistake_pairs": 56,
+    "scored_pairs": 41,
+    "mismatched_pairs": 40,
+    "mismatched_excluded_recipes": [
+      "coffee"
+    ],
+    "bertscore_f1": {
+      "gold": 89.93602453208551,
+      "instruction_restatement": 73.04172254190212,
+      "mismatched_reference": 63.12290042638779
+    }
+  },
+  "monolith": {
+    "mistake_pairs": 59,
+    "scored_pairs": 59,
+    "mismatched_pairs": 59,
+    "mismatched_excluded_recipes": [],
+    "bertscore_f1": {
+      "gold": 94.42980890556917,
+      "instruction_restatement": 68.51452669854892,
+      "mismatched_reference": 64.30398028785899
+    }
+  }
+}

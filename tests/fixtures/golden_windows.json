@@ -1,0 +1,17 @@
+{
+  "module_a": [
+    {"window_start": 0.0, "window_end": 5.0, "label": "NONE"},
+    {"window_start": 0.0, "window_end": 8.0, "label": "STEP_0"}
+  ],
+  "module_b": {
+    "clip_duration": 30.0,
+    "accepted": [0.0, 30.0],
+    "raw_out_of_bounds": [20.0, 32.0],
+    "clamped": [20.0, 30.0],
+    "clamp_reason": "out_of_bounds"
+  },
+  "module_c": {
+    "fine_classes": ["WRONG_OBJECT", "CORRECTION", "CORRECT"],
+    "aggregate_classes": ["MISTAKE", "CORRECTION", "CORRECT"]
+  }
+}

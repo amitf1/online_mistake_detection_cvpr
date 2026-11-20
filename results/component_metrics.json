@@ -1,0 +1,236 @@
+{
+  "all_test": {
+    "videos": 58,
+    "module_a": {
+      "polls": 2679,
+      "not_completed": 1808,
+      "retries": 144,
+      "step_id_macro_f1": 0.8027316518458404,
+      "accuracy": 0.8887644643523703
+    },
+    "module_b": {
+      "retries": 120,
+      "spans_rejected_by_module_c": 122,
+      "every_call": {
+        "calls": 871,
+        "spans": 818,
+        "not_completed": 53,
+        "calls_with_target": 693,
+        "precision_at_0.5": 0.784841075794621,
+        "recall_at_0.5": 0.9264069264069265,
+        "f1_at_0.5": 0.8497683653209794,
+        "mean_iou": 0.8151397507470087,
+        "boundary_mae_seconds": 2.26287988422576
+      },
+      "upstream_correct": {
+        "calls": 656,
+        "spans": 654,
+        "not_completed": 2,
+        "calls_with_target": 656,
+        "precision_at_0.5": 0.9709480122324159,
+        "recall_at_0.5": 0.9679878048780488,
+        "f1_at_0.5": 0.9694656488549619,
+        "mean_iou": 0.8453680393252343,
+        "boundary_mae_seconds": 1.418807339449542
+      }
+    },
+    "module_c": {
+      "retries": 118,
+      "every_call": {
+        "calls": 794,
+        "not_completed": 122,
+        "accuracy": 0.7770780856423174,
+        "fine_macro_f1": 0.6659288004177046,
+        "macro_f1_with_no_match": 0.5605505269651798,
+        "per_class": {
+          "CORRECT": {
+            "support": 672,
+            "predicted": 621,
+            "tp": 568,
+            "f1": 0.8785769528228924
+          },
+          "CORRECTION": {
+            "support": 4,
+            "predicted": 10,
+            "tp": 4,
+            "f1": 0.5714285714285715
+          },
+          "MODIFICATION": {
+            "support": 34,
+            "predicted": 28,
+            "tp": 26,
+            "f1": 0.8387096774193549
+          },
+          "SLIP": {
+            "support": 19,
+            "predicted": 13,
+            "tp": 6,
+            "f1": 0.37499999999999994
+          },
+          "NO_MATCH": {
+            "support": 65,
+            "predicted": 122,
+            "tp": 13,
+            "f1": 0.1390374331550802
+          }
+        }
+      },
+      "upstream_correct": {
+        "calls": 623,
+        "not_completed": 81,
+        "accuracy": 0.8475120385232745,
+        "fine_macro_f1": 0.7331913405333479,
+        "macro_f1_with_no_match": 0.5865530724266783,
+        "per_class": {
+          "CORRECT": {
+            "support": 572,
+            "predicted": 504,
+            "tp": 495,
+            "f1": 0.9200743494423791
+          },
+          "CORRECTION": {
+            "support": 4,
+            "predicted": 9,
+            "tp": 4,
+            "f1": 0.6153846153846153
+          },
+          "MODIFICATION": {
+            "support": 31,
+            "predicted": 23,
+            "tp": 23,
+            "f1": 0.8518518518518519
+          },
+          "SLIP": {
+            "support": 16,
+            "predicted": 6,
+            "tp": 6,
+            "f1": 0.5454545454545454
+          },
+          "NO_MATCH": {
+            "support": 0,
+            "predicted": 81,
+            "tp": 0,
+            "f1": 0.0
+          }
+        }
+      }
+    }
+  },
+  "erroneous_videos": {
+    "videos": 25,
+    "module_a": {
+      "polls": 965,
+      "not_completed": 632,
+      "retries": 44,
+      "step_id_macro_f1": 0.837653865659591,
+      "accuracy": 0.900518134715026
+    },
+    "module_b": {
+      "retries": 40,
+      "spans_rejected_by_module_c": 39,
+      "every_call": {
+        "calls": 333,
+        "spans": 322,
+        "not_completed": 11,
+        "calls_with_target": 276,
+        "precision_at_0.5": 0.8012422360248447,
+        "recall_at_0.5": 0.9347826086956522,
+        "f1_at_0.5": 0.862876254180602,
+        "mean_iou": 0.821372672771891,
+        "boundary_mae_seconds": 2.099272727272727
+      },
+      "upstream_correct": {
+        "calls": 266,
+        "spans": 265,
+        "not_completed": 1,
+        "calls_with_target": 266,
+        "precision_at_0.5": 0.969811320754717,
+        "recall_at_0.5": 0.9661654135338346,
+        "f1_at_0.5": 0.967984934086629,
+        "mean_iou": 0.846672375940895,
+        "boundary_mae_seconds": 1.4705660377358487
+      }
+    },
+    "module_c": {
+      "retries": 39,
+      "every_call": {
+        "calls": 302,
+        "not_completed": 39,
+        "accuracy": 0.7748344370860927,
+        "fine_macro_f1": 0.6711478362201388,
+        "macro_f1_with_no_match": 0.5691763334922401,
+        "per_class": {
+          "CORRECT": {
+            "support": 222,
+            "predicted": 213,
+            "tp": 193,
+            "f1": 0.8873563218390804
+          },
+          "CORRECTION": {
+            "support": 4,
+            "predicted": 10,
+            "tp": 4,
+            "f1": 0.5714285714285715
+          },
+          "MODIFICATION": {
+            "support": 34,
+            "predicted": 28,
+            "tp": 26,
+            "f1": 0.8387096774193549
+          },
+          "SLIP": {
+            "support": 19,
+            "predicted": 12,
+            "tp": 6,
+            "f1": 0.3870967741935484
+          },
+          "NO_MATCH": {
+            "support": 23,
+            "predicted": 39,
+            "tp": 5,
+            "f1": 0.16129032258064516
+          }
+        }
+      },
+      "upstream_correct": {
+        "calls": 245,
+        "not_completed": 31,
+        "accuracy": 0.8163265306122449,
+        "fine_macro_f1": 0.7288484288484288,
+        "macro_f1_with_no_match": 0.5830787430787431,
+        "per_class": {
+          "CORRECT": {
+            "support": 194,
+            "predicted": 176,
+            "tp": 167,
+            "f1": 0.9027027027027028
+          },
+          "CORRECTION": {
+            "support": 4,
+            "predicted": 9,
+            "tp": 4,
+            "f1": 0.6153846153846153
+          },
+          "MODIFICATION": {
+            "support": 31,
+            "predicted": 23,
+            "tp": 23,
+            "f1": 0.8518518518518519
+          },
+          "SLIP": {
+            "support": 16,
+            "predicted": 6,
+            "tp": 6,
+            "f1": 0.5454545454545454
+          },
+          "NO_MATCH": {
+            "support": 0,
+            "predicted": 31,
+            "tp": 0,
+            "f1": 0.0
+          }
+        }
+      }
+    }
+  }
+}

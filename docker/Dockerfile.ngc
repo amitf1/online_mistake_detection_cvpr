@@ -1,0 +1,55 @@
+# NGC PyTorch image (CUDA 13, Blackwell). This is the environment used for the reported runs.
+#   docker build -f docker/Dockerfile.ngc -t online-mistake-detection:ngc .
+FROM nvcr.io/nvidia/pytorch:26.08-py3
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    HF_HOME=/cache/huggingface \
+    PYTHONNOUSERSITE=1
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    ca-certificates \
+    ffmpeg \
+    git \
+    libglib2.0-0 \
+    libgl1 \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
+
+RUN python3 -m venv --system-site-packages /opt/venv
+ENV PATH="/opt/venv/bin:${PATH}"
+
+RUN pip install --upgrade pip setuptools wheel \
+    && pip install --no-deps unsloth==2026.6.7 unsloth_zoo==2026.6.5
+
+COPY docker/requirements.ngc.txt ./requirements.txt
+COPY pyproject.toml ./
+COPY src ./src
+COPY docker/entrypoint.sh /usr/local/bin/online-mistake-detection-entrypoint
+
+# Fast linear-attention kernels for Qwen3.5-family models; the torch fallback runs out of memory on long clips.
+RUN pip install -r requirements.txt \
+    && MAX_JOBS=8 pip install --no-build-isolation --no-deps causal-conv1d==1.7.0 \
+    && pip install --no-deps fla-core==0.5.2 flash-linear-attention==0.5.2 \
+    && pip install -e . --no-deps \
+    && chmod +x /usr/local/bin/online-mistake-detection-entrypoint
+
+RUN python - <<'PY'
+import torch
+from causal_conv1d import causal_conv1d_fn, causal_conv1d_update
+from fla.modules import FusedRMSNormGated
+from fla.ops.gated_delta_rule import chunk_gated_delta_rule, fused_recurrent_gated_delta_rule
+
+print("torch", torch.__version__, "cuda", torch.version.cuda)
+assert all(callable(fn) for fn in (
+    causal_conv1d_fn, causal_conv1d_update, FusedRMSNormGated,
+    chunk_gated_delta_rule, fused_recurrent_gated_delta_rule,
+))
+PY
+
+ENTRYPOINT ["online-mistake-detection-entrypoint"]
+CMD ["bash"]

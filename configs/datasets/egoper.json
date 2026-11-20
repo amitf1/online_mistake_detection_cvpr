@@ -1,0 +1,7 @@
+{
+  "dataset": "egoper",
+  "root_env": "EGOPER_ROOT",
+  "annotation": "annotation.json",
+  "task_graph": "task_graph.txt",
+  "tasks": ["coffee", "pinwheels", "oatmeal", "quesadilla", "tea"]
+}

@@ -1,0 +1,5 @@
+{
+  "aggregate_taxonomy": ["MISTAKE", "CORRECTION", "CORRECT"],
+  "legacy_binary_parser": false,
+  "checkpoint_metric": "eval_fine/macro_f1"
+}

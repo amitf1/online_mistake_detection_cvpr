@@ -1,0 +1,227 @@
+{
+  "iou_threshold": 0.5,
+  "all_test": {
+    "videos": 58,
+    "annotated_segments": 694,
+    "annotated_error_segments": 73,
+    "annotated_by_class": {
+      "CORRECT": 621,
+      "CORRECTION": 5,
+      "MODIFICATION": 33,
+      "SLIP": 19,
+      "ADDITION": 16
+    },
+    "methods": {
+      "pipeline": {
+        "predicted_segments": 696,
+        "predicted_error_segments": 75,
+        "predicted_by_class": {
+          "CORRECT": 621,
+          "CORRECTION": 10,
+          "MODIFICATION": 28,
+          "SLIP": 13,
+          "ADDITION": 24
+        },
+        "eda": 97.71401587364865,
+        "binary_f1_at_0.5": 80.65771591248485,
+        "fine_at_0.5": {
+          "per_class": {
+            "CORRECTION": {
+              "support": 5,
+              "precision": 40.0,
+              "recall": 80.0,
+              "f1": 53.333333333333336
+            },
+            "MODIFICATION": {
+              "support": 33,
+              "precision": 92.85714285714286,
+              "recall": 78.78787878787878,
+              "f1": 85.24590163934425
+            },
+            "SLIP": {
+              "support": 19,
+              "precision": 46.15384615384615,
+              "recall": 31.57894736842105,
+              "f1": 37.5
+            },
+            "ADDITION": {
+              "support": 16,
+              "precision": 62.5,
+              "recall": 93.75,
+              "f1": 75.0
+            }
+          },
+          "macro": {
+            "precision": 60.377747252747255,
+            "recall": 71.02920653907496,
+            "f1": 62.7698087431694
+          }
+        },
+        "tas_f1_at_0.5": 92.04623437442511,
+        "o_acc": 99.58333333333333,
+        "o_iou": 79.12878787878788
+      },
+      "monolith": {
+        "predicted_segments": 724,
+        "predicted_error_segments": 82,
+        "predicted_by_class": {
+          "CORRECT": 642,
+          "CORRECTION": 10,
+          "MODIFICATION": 32,
+          "SLIP": 20,
+          "ADDITION": 20
+        },
+        "eda": 97.83729264629534,
+        "binary_f1_at_0.5": 84.08050984915253,
+        "fine_at_0.5": {
+          "per_class": {
+            "CORRECTION": {
+              "support": 5,
+              "precision": 30.0,
+              "recall": 60.0,
+              "f1": 40.0
+            },
+            "MODIFICATION": {
+              "support": 33,
+              "precision": 87.5,
+              "recall": 84.84848484848484,
+              "f1": 86.15384615384616
+            },
+            "SLIP": {
+              "support": 19,
+              "precision": 55.00000000000001,
+              "recall": 57.89473684210527,
+              "f1": 56.41025641025641
+            },
+            "ADDITION": {
+              "support": 16,
+              "precision": 65.0,
+              "recall": 81.25,
+              "f1": 72.22222222222221
+            }
+          },
+          "macro": {
+            "precision": 59.375,
+            "recall": 70.99830542264753,
+            "f1": 63.69658119658119
+          }
+        },
+        "tas_f1_at_0.5": 93.63111484883952,
+        "o_acc": 97.77777777777779,
+        "o_iou": 95.4040404040404
+      }
+    }
+  },
+  "erroneous_videos": {
+    "videos": 25,
+    "annotated_segments": 280,
+    "annotated_error_segments": 73,
+    "annotated_by_class": {
+      "CORRECT": 207,
+      "CORRECTION": 5,
+      "MODIFICATION": 33,
+      "SLIP": 19,
+      "ADDITION": 16
+    },
+    "methods": {
+      "pipeline": {
+        "predicted_segments": 283,
+        "predicted_error_segments": 70,
+        "predicted_by_class": {
+          "CORRECT": 213,
+          "CORRECTION": 10,
+          "MODIFICATION": 28,
+          "SLIP": 12,
+          "ADDITION": 20
+        },
+        "eda": 93.92867817114393,
+        "binary_f1_at_0.5": 81.2682118054091,
+        "fine_at_0.5": {
+          "per_class": {
+            "CORRECTION": {
+              "support": 5,
+              "precision": 40.0,
+              "recall": 80.0,
+              "f1": 53.333333333333336
+            },
+            "MODIFICATION": {
+              "support": 33,
+              "precision": 92.85714285714286,
+              "recall": 78.78787878787878,
+              "f1": 85.24590163934425
+            },
+            "SLIP": {
+              "support": 19,
+              "precision": 50.0,
+              "recall": 31.57894736842105,
+              "f1": 38.70967741935484
+            },
+            "ADDITION": {
+              "support": 16,
+              "precision": 75.0,
+              "recall": 93.75,
+              "f1": 83.33333333333334
+            }
+          },
+          "macro": {
+            "precision": 64.46428571428572,
+            "recall": 71.02920653907496,
+            "f1": 65.15556143134144
+          }
+        },
+        "tas_f1_at_0.5": 91.4478777962708,
+        "o_acc": 99.16666666666666,
+        "o_iou": 82.16666666666667
+      },
+      "monolith": {
+        "predicted_segments": 284,
+        "predicted_error_segments": 74,
+        "predicted_by_class": {
+          "CORRECT": 210,
+          "CORRECTION": 10,
+          "MODIFICATION": 32,
+          "SLIP": 18,
+          "ADDITION": 14
+        },
+        "eda": 94.8113621538279,
+        "binary_f1_at_0.5": 86.22229412798872,
+        "fine_at_0.5": {
+          "per_class": {
+            "CORRECTION": {
+              "support": 5,
+              "precision": 30.0,
+              "recall": 60.0,
+              "f1": 40.0
+            },
+            "MODIFICATION": {
+              "support": 33,
+              "precision": 87.5,
+              "recall": 84.84848484848484,
+              "f1": 86.15384615384616
+            },
+            "SLIP": {
+              "support": 19,
+              "precision": 61.111111111111114,
+              "recall": 57.89473684210527,
+              "f1": 59.45945945945946
+            },
+            "ADDITION": {
+              "support": 16,
+              "precision": 92.85714285714286,
+              "recall": 81.25,
+              "f1": 86.66666666666667
+            }
+          },
+          "macro": {
+            "precision": 67.8670634920635,
+            "recall": 70.99830542264753,
+            "f1": 68.06999306999307
+          }
+        },
+        "tas_f1_at_0.5": 94.57495142009734,
+        "o_acc": 94.88888888888889,
+        "o_iou": 93.77777777777779
+      }
+    }
+  }
+}
