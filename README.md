@@ -1,4 +1,6 @@
-# Online Procedural Mistake Detection with Video Language Models
+# Online Mistake Detection in Instruction-Conditioned Procedural Video
+
+This repository contains the implementation of our paper: Online Mistake Detection in Instruction-Conditioned Procedural Video.
 
 Code, configurations, final predictions and result tables for our two online mistake-detection systems on **EgoPER**:
 
